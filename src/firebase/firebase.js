@@ -1,5 +1,5 @@
 import * as firebase from 'firebase'
-import expenses from '../selectors/expenses';
+
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -19,7 +19,10 @@ firebase.initializeApp(config);
 
 const database = firebase.database()
 
-export { firebase, database as default }
+//Setting up Google Authenticator
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider()
+
+export { firebase, googleAuthProvider, database as default }
 
 
 
